@@ -1,4 +1,3 @@
-
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
@@ -7,6 +6,7 @@ for (const element of toggle) {
     nav.classList.toggle('show')
   })
 }
+
 const links = document.querySelectorAll('nav ul li a')
 
 for (const link of links) {
@@ -14,7 +14,9 @@ for (const link of links) {
     nav.classList.remove('show')
   })
 }
+
 const header = document.querySelector('#header')
+
 const navHeight = header.offsetHeight
 
 function changeHeaderWhenScroll() {
@@ -26,6 +28,7 @@ function changeHeaderWhenScroll() {
     header.classList.remove('scroll')
   }
 }
+
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   pagination: {
@@ -40,6 +43,7 @@ const swiper = new Swiper('.swiper-container', {
     }
   }
 })
+
 const scrollReveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
@@ -89,6 +93,7 @@ function activateMenuAtCurrentSection() {
     }
   }
 }
+
 window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
   backToTop()
